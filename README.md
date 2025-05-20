@@ -22,12 +22,16 @@
 
 ## 💻 Requirements
 
-The code is implemented in Python 3.8. The required packages are listed in the `requirements.txt` file. You can install the required packages by running the following command:
-
+The code is implemented in Python 3.9. 
+We recommend using the provided Dockerfile to set up the environment, as all dependencies are already specified in it. You can build and run the Docker image with:
 ```
-conda create --name radiollm python=3.8
+docker build -t radiollm:latest .
+docker run --rm -it radiollm:latest
+```
+Alternatively, you can manually create a conda environment and install dependencies as previously described.You can install the required packages by running the following command:
+```
+conda create --name radiollm python=3.9
 conda activate radiollm
-pip install -r requirements.txt
 pip install git+https://github.com/huggingface/transformers
 pip install git+https://github.com/huggingface/peft
 ```
