@@ -1,0 +1,55 @@
+RML2016:
+  dataset_name: RML2016a+b_total_snr
+  resample_is: False
+  resample_num: 1
+  min_mask_ratio: 0.2
+  max_mask_ratio: 0.5
+  threshold: [0.5,1,0]
+  balence: 100
+  batchsize: 512
+  numworks: 2
+  numclass: 11
+  seq_len: 128
+  content: The RadioML 2016.10A dataset contains synthetic radar signals generated through software simulations. It consists of 11 different modulation types, including various forms of amplitude, frequency, and phase modulation. The signals are simulated under varying signal-to-noise ratios, mimicking real-world conditions. This dataset's synthetic nature allows for controlled experiments and reproducibility.
+
+RML2018:
+  dataset_name: RML2018_high_snr
+  resample_is: False
+  resample_num: 1
+  min_mask_ratio: 0.2
+  max_mask_ratio: 0.5
+  threshold: [0.5,1,0]
+  balence: 1
+  batchsize: 64
+  numworks: 2
+  numclass: 29
+  seq_len: 1024
+  content: An extension of the 2016.10A version, the RadioML 2018.01A dataset introduces a larger variety of 24 modulation schemes and a wider range of signal-to-noise ratios. It incorporates more complex propagation effects, such as multipath and Doppler shifts, to better emulate realistic scenarios. This dataset's comprehensive signal diversity and challenging conditions make it suitable for advanced signal classification tasks.
+
+ADSB:
+  dataset_name: ADSB
+  resample_is: True
+  resample_num: 3
+  min_mask_ratio: 0.2
+  max_mask_ratio: 0.5
+  threshold:  [0.5,1,0]
+  balence: 10000
+  batchsize: 64
+  numworks: 2
+  numclass: 198
+  seq_len: 1000
+  content: Unlike the synthetic RadioML datasets, the ADS-B dataset consists of real-world radio frequency signals captured from aircraft transponders. It includes metadata such as aircraft position, altitude, and velocity, enabling applications in aircraft tracking and surveillance. The dataset's real-world nature introduces challenges like signal interference, noise, and dynamic conditions, making it valuable for evaluating practical signal processing and classification models.
+
+WIFI:
+  dataset_name: WIFI_2ft
+  resample_is: False
+  resample_num: 1
+  min_mask_ratio: 0.2
+  max_mask_ratio: 0.5
+  threshold:  [0.5,1,0]
+  balence: 20
+  batchsize: 64
+  numworks: 2
+  numclass: 16
+  seq_len: 128
+  content: The WIFI dataset includes I/Q samples collected from a 16-node USRP X310 software defined radio (SDR) testbed as well as samples from 140 commercial off-the-shelf WiFi devices. The USRP testbed consists of 16 transmitting nodes that are identical USRP X310 radios sending IEEE 802.11a WiFi compliant data frames. The dataset is used to evaluate ORACLE's classification performance under static and dynamic channel conditions.
