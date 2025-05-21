@@ -16,19 +16,21 @@
 
 ## 🔥 NEWS
 - **[2025-02-01]** 📝 The preprint of the RadioLLM paper is available on arXiv. Check the [paper page](https://arxiv.org/abs/2501.17888) for more details.
-
+- **[2025-05-13]** 📝 The revised version of the RadioLLM paper is now available on arXiv. See the [paper page](https://arxiv.org/abs/2501.17888) for details.
+- **[2025-05-20]** 📝 Part of the implementation code for RadioLLM is now publicly available.
 ## 📅 TODO
-- [ ] Collect the codes of RadioLLM's classification network and other comparison models.
+- [-] Collect the codes of RadioLLM's classification network and other comparison models.
 
 ## 💻 Requirements
 
 The code is implemented in Python 3.9. 
-We recommend using the provided Dockerfile to set up the environment, as all dependencies are already specified in it. You can build and run the Docker image with:
+We recommend using the provided Dockerfile to set up the environment, as all dependencies are already specified in it. 
+You can build and run the Docker image with:
 ```
 docker build -t radiollm:latest .
 docker run --rm -it radiollm:latest
 ```
-Alternatively, you can manually create a conda environment and install dependencies as previously described.You can install the required packages by running the following command:
+Alternatively, you can manually create a conda environment and install dependencies as previously described. You can install the required packages by running the following command:
 ```
 conda create --name radiollm python=3.9
 conda activate radiollm
